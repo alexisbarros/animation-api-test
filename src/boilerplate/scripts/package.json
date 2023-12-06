@@ -1,0 +1,25 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "remove:dist": "rm -rf dist",
+    "install:libs": "npm run remove:dist && tsc && node dist/boilerplate/scripts/install-packages.script.js",
+    "generate:domain": "npm run remove:dist && tsc && node dist/boilerplate/scripts/create-models.script.js && node dist/boilerplate/scripts/create-interfaces.script.js",
+    "generate:repository": "npm run remove:dist && tsc && node dist/boilerplate/scripts/create-repositories.script.js",
+    "generate:crudcontroller": "npm run remove:dist && tsc && node dist/boilerplate/scripts/create-crud-controllers.script.js",
+    "generate:authstrategy": "npm run remove:dist && tsc && node dist/boilerplate/scripts/create-auth-middleware.script.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "child_process": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "typescript": "^5.2.2"
+  }
+}
