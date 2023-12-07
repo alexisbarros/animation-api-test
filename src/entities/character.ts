@@ -3,7 +3,7 @@ import * as _interface from '../boilerplate/interfaces';
 export const character: _interface.IEntity = {
   schema: {
     name: {type: _interface.schemaAttributeTypeEnum.string},
-    sex: {type: _interface.schemaAttributeTypeEnum.string},
+    personGender: {type: _interface.schemaAttributeTypeEnum.string},
     characterType: {type: _interface.schemaAttributeTypeEnum.string},
     animationId: {
       type: _interface.schemaAttributeTypeEnum.object,

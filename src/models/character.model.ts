@@ -4,7 +4,7 @@ import * as _interface from '../interfaces';
 export class Character {
   _id?: String;
   name?: String;
-  sex?: String;
+  personGender?: String;
   characterType?: String;
   animationId?: _interface.IAnimation | String;
   _deletedAt?: Number;
@@ -12,7 +12,7 @@ export class Character {
   constructor(data: any) {
     this._id = data._id;
     this.name = data.name;
-    this.sex = data.sex;
+    this.personGender = data.personGender;
     this.characterType = data.characterType;
     this.animationId =
       data.animationId && typeof data.animationId === 'object'
