@@ -10,9 +10,10 @@ export class Animation {
     this._id = data._id;
     this.name = data.name;
     this.description = data.description;
-    this.startDate = data.startDate && new Date(data.startDate).toDateString();
+    this.startDate =
+      data.startDate && new Date(data.startDate).toISOString().split('T')[0];
     this.finishDate =
-      data.startDate && new Date(data.finishDate).toDateString();
+      data.startDate && new Date(data.finishDate).toISOString().split('T')[0];
     this._deletedAt = data._deletedAt;
   }
 }
