@@ -19,6 +19,7 @@ export class CloudStorageService {
   }): Promise<string> {
     const storage = new Storage({keyFilename: 'storage-key.json'});
     try {
+      console.log(file);
       const bucket = storage.bucket(this.bucket);
       const fileName = file.originalname;
 
