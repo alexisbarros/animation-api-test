@@ -19,7 +19,6 @@ export class CloudStorageService {
   }): Promise<string> {
     const storage = new Storage({keyFilename: 'storage-key.json'});
     try {
-      console.log(file);
       const bucket = storage.bucket(this.bucket);
       const fileName = file.originalname;
 
@@ -29,7 +28,7 @@ export class CloudStorageService {
 
       return publicUrl;
     } catch (error) {
-      throw new Error(`Upload file error: ${error.message}`);
+      throw new Error(`${file} --> Upload file error: ${error.message}`);
     }
   }
 }
