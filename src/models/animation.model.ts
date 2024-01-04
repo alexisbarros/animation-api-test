@@ -1,6 +1,7 @@
 export class Animation {
   _id?: String;
   name: String;
+  folderPicture?: String;
   description?: String;
   startDate?: Number | String;
   finishDate?: Number | String;
@@ -9,6 +10,7 @@ export class Animation {
   constructor(data: any) {
     this._id = data._id;
     this.name = data.name;
+    this.folderPicture = data.folderPicture;
     this.description = data.description;
     this.startDate =
       data.startDate && new Date(data.startDate).toISOString().split('T')[0];

@@ -4,6 +4,7 @@ export const animation: _interface.IEntity = {
   name: 'Animation',
   schema: {
     name: {type: _interface.schemaAttributeTypeEnum.string, required: true},
+    folderPicture: {type: _interface.schemaAttributeTypeEnum.string},
     description: {type: _interface.schemaAttributeTypeEnum.string},
     startDate: {type: _interface.schemaAttributeTypeEnum.number},
     finishDate: {type: _interface.schemaAttributeTypeEnum.number},
