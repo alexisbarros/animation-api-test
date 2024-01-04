@@ -28,7 +28,7 @@ export class CloudStorageService {
 
       return publicUrl;
     } catch (error) {
-      throw new Error(`${file} --> Upload file error: ${error.message}`);
+      throw new Error(`Upload file error: ${error.message}`);
     }
   }
 }

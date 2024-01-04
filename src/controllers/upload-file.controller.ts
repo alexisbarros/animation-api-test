@@ -5,7 +5,7 @@ import {toSwaggerResponse} from '../boilerplate/services';
 import {
   IHttpResponse,
   badRequestErrorHttpResponse,
-  createHttpResponse,
+  okHttpResponse,
 } from '../boilerplate/utils';
 import {CloudStorageService} from '../services';
 import {GetBodyAndFilesFromRequest} from '../usecases';
@@ -18,7 +18,7 @@ export class UploadFileController {
   ) {}
 
   @post('/upload-file')
-  @response(201, toSwaggerResponse({}))
+  @response(200, toSwaggerResponse({}))
   async create(
     @requestBody({
       content: {
@@ -38,7 +38,7 @@ export class UploadFileController {
     const url = await this.storagesService.uploadFile({path, file});
 
     try {
-      return createHttpResponse({
+      return okHttpResponse({
         message: 'Upload successfuly',
         data: {url},
         request: this.httpRequest,
